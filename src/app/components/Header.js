@@ -89,6 +89,7 @@ const DisplayWrapper = styled.div`
     props.$scrolled ? "#ffffff" : "transparent"};
   box-shadow: ${(props) =>
     props.$scrolled ? "0 1px 4px #ffffff" : "none"};
+    props.$scrolled ? "0 1px 4px #ffffff" : "none"};
   backdrop-filter: ${(props) => (props.$scrolled ? "blur(10.1px)" : "none")};
   -webkit-backdrop-filter: ${(props) =>
     props.$scrolled ? "blur(10.1px)" : "none"};
