@@ -17,10 +17,7 @@ export const SearchBar = () => {
 };
 
 const SearchWrapper = styled.div`
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 16px;
-  display:grid;
+  display: grid;
   grid-template-columns: 1.5fr 1fr 1fr auto;
   gap: 16px;
 
@@ -34,25 +31,24 @@ const SearchWrapper = styled.div`
 `;
 
 const Input = styled.input`
-  height: 48px;
+  height: 50px;
   padding: 0 16px;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb !important;
   font-size: 14px;
 `;
 
 const Select = styled.select`
-  height: 48px;
+  height: 50px;
   padding: 0 16px;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   font-size: 14px;
 `;
 
-
 const SlantedPrimaryButton = styled.button`
   width: 200px;
-  height: 44px;
+  height: 50px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;

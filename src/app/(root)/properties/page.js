@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { PageHeader } from "@/app/components/PageHeader";
-import {SearchBar} from "../../components/SearchBar";
+import { SearchBar } from "../../components/SearchBar";
 import BaseLayout from "../../components/BaseLayout";
 import backgroundImage from "../../../../public/assets/hero-background.jpg";
 import family_house from "../../../../public/assets/family_house.jpg";
@@ -20,76 +20,76 @@ export default function Properties() {
   };
 
   const properties = [
-      {
-        id: 1,
-        title: "Family House",
-        price: "Start from ₹75L",
-        image: family_house,
-      },
-      {
-        id: 2,
-        title: "Apartment",
-        price: "Start from ₹65L",
-        image: apartment,
-      },
-      {
-        id: 3,
-        title: "Guest House",
-        price: "Start from ₹75L",
-        image: guest_house,
-      },
-      {
-        id: 4,
-        title: "villa House",
-        price: "Start from ₹95L",
-        image: villa,
-      },
-      {
-        id: 5,
-        title: "Family House",
-        price: "Start from ₹75L",
-        image: cta_bg,
-      },
-      {
-        id: 6,
-        title: "Apartment",
-        price: "Start from ₹65L",
-        image: backgroundImage,
-      },
+    {
+      id: 1,
+      title: "Family House",
+      price: "Start from ₹75L",
+      image: family_house,
+    },
+    {
+      id: 2,
+      title: "Apartment",
+      price: "Start from ₹65L",
+      image: apartment,
+    },
+    {
+      id: 3,
+      title: "Guest House",
+      price: "Start from ₹75L",
+      image: guest_house,
+    },
+    {
+      id: 4,
+      title: "villa House",
+      price: "Start from ₹95L",
+      image: villa,
+    },
+    {
+      id: 5,
+      title: "Family House",
+      price: "Start from ₹75L",
+      image: cta_bg,
+    },
+    {
+      id: 6,
+      title: "Apartment",
+      price: "Start from ₹65L",
+      image: backgroundImage,
+    },
   ];
 
   return (
     <BaseLayout>
       <PageHeader pageHeader={pageHeader} />
       <SectionWrapper>
-        <SearchBar/>
-          <CardsWrapper>
-            {properties.map((item) => (
-              <Card key={item.id}>
-                <ImageWrapper>
-                  <Image src={item.image} alt={item.title} />
-                </ImageWrapper>
-    
-                <CardFooter>
-                  <div>
-                    <h4>{item.title}</h4>
-                    <span>{item.price}</span>
-                  </div>
-                  <SlantedArrowButton>
-                    <span className="transition" />→
-                  </SlantedArrowButton>
-                </CardFooter>
-              </Card>
-            ))}
-          </CardsWrapper>
+        <SearchBar />
+        <CardsWrapper>
+          {properties.map((item) => (
+            <Card key={item.id}>
+              <ImageWrapper>
+                <Image src={item.image} alt={item.title} />
+              </ImageWrapper>
+
+              <CardFooter>
+                <div>
+                  <h4>{item.title}</h4>
+                  <span>{item.price}</span>
+                </div>
+                <SlantedArrowButton>
+                  <span className="transition" />→
+                </SlantedArrowButton>
+              </CardFooter>
+            </Card>
+          ))}
+        </CardsWrapper>
       </SectionWrapper>
     </BaseLayout>
   );
-};
+}
 
 const SectionWrapper = styled.section`
   width: 100%;
-  padding: 30px 5%;
+  padding: 0px 5% 50px;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -100,7 +100,7 @@ const SectionWrapper = styled.section`
 const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 25px;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
@@ -160,7 +160,6 @@ const CardFooter = styled.div`
     color: #6b7280;
   }
 `;
-
 
 const SlantedArrowButton = styled.div`
   width: 44px;

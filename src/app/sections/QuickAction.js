@@ -3,27 +3,26 @@ import Image from "next/image";
 import styled from "styled-components";
 import cta_bg from "../../../public/assets/cta_bg.jpg";
 
-export const QuickAction = () =>{
-    return(
-        <SectionWrapper>
-            <CTASection>
-                <Overlay />
-                <Content>
-                    <h2>Find Your Dream Home Faster</h2>
-                    <p>
-                    Explore and uncover your ideal dream home more quickly than ever before
-                    with our innovative tools and resources designed to streamline your search.
-                    </p>
-
-                    <SlantedPrimaryButton href="/contact">
-                        <span className="transition"></span>
-                        <span className="label">Get in Touch →</span>
-                    </SlantedPrimaryButton>
-                </Content>
-            </CTASection>
-
-        </SectionWrapper>
-    )
+export const QuickAction = () => {
+  return (
+    <SectionWrapper>
+      <CTASection>
+        <Overlay />
+        <Content>
+          <h2>Find Your Dream Home Faster</h2>
+          <p>
+            Explore and uncover your ideal dream home more quickly than ever
+            before with our innovative tools and resources designed to
+            streamline your search.
+          </p>
+          <SlantedPrimaryButton href="/contact">
+            <span className="transition"></span>
+            <span className="label">Get in Touch →</span>
+          </SlantedPrimaryButton>
+        </Content>
+      </CTASection>
+    </SectionWrapper>
+  );
 };
 
 const SectionWrapper = styled.section`
@@ -60,23 +59,19 @@ const Overlay = styled.div`
 
 const Content = styled.div`
   position: relative;
-  z-index: 2;
+  z-index: 1;
   text-align: center;
   max-width: 780px;
-  padding: 0 20px;
   color: #fff;
 
   h2 {
     font-size: 52px;
     font-weight: 500;
-    margin-bottom: 16px;
   }
 
   p {
     font-size: 16px;
-    line-height: 1.7;
-    opacity: 0.9;
-    margin-bottom: 32px;
+    margin-bottom: 20px !important;
   }
 
   @media (max-width: 768px) {
@@ -85,7 +80,6 @@ const Content = styled.div`
     }
   }
 `;
-
 
 const SlantedPrimaryButton = styled.button`
   width: 200px;
@@ -96,7 +90,6 @@ const SlantedPrimaryButton = styled.button`
   background: linear-gradient(135deg, #cc1e15, #c01209ff);
   border: none;
   cursor: pointer;
-  margin-top:10px;
 
   clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
 

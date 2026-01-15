@@ -131,7 +131,6 @@ const CardsWrapper = styled.div`
   display: flex;
   gap: 30px;
   overflow-x: auto;
-  padding-bottom: 10px;
 `;
 
 const TestimonialCard = styled.div`

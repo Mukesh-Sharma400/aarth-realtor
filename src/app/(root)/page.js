@@ -21,7 +21,7 @@ export default function Home() {
       <SectionDivider />
       <Testimonials />
       <SectionDivider />
-      <QuickAction/>
+      <QuickAction />
     </BaseLayout>
   );
 }
