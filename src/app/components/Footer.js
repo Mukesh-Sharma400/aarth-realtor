@@ -12,7 +12,7 @@ export const Footer = () => {
 
   useEffect(() => {
     const tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      document.querySelectorAll('[data-bs-toggle="tooltip"]'),
     );
     const tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => {
       return new window.bootstrap.Tooltip(tooltipTriggerEl);
@@ -59,9 +59,14 @@ export const Footer = () => {
   ];
 
   const servicesData = [
-    "Interior Designing",
-    "Interior Designing",
-    "Interior Designing",
+    "Property Sales",
+    "Property Leasing",
+    "Investment Advisory",
+    "Property Valuation",
+    "Legal Assistance",
+    "Property Management",
+    "Project Marketing",
+    "Tenant Screening",
   ];
 
   return (
@@ -221,16 +226,11 @@ const SocialLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
   border-radius: 50%;
-  color: white;
-  background: rgba(225, 225, 225, 0.3);
-  box-shadow: 0 4px 15px rgba(225, 225, 225, 0.3);
-  backdrop-filter: blur(10.1px);
-  -webkit-backdrop-filter: blur(10.1px);
-  border: 1px solid rgba(225, 225, 225, 1);
+  color: #cc1e15;
+  background: #fff;
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    color: #cc1e15;
     border: 1px solid #cc1e15;
   }
 `;
@@ -285,7 +285,9 @@ const Page = styled(Link)`
     height: 1px;
     background-color: transparent;
     width: 0;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
   }
 
   &:hover::before {
@@ -351,6 +353,12 @@ const LeftSide = styled.div`
 
   span {
     font-weight: 600;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      color: #cc1e15;
+    }
   }
 `;
 

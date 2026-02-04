@@ -4,17 +4,19 @@ import styled from "styled-components";
 import cta_bg from "../../../public/assets/cta_bg.jpg";
 
 export const QuickAction = () => {
+  const sectionData = {
+    heading: "Let’s Help You Find the Right Home",
+    description:
+      "Tell us what you’re looking for and our team will guide you every step of the way—from shortlisting to final possession.",
+  };
+
   return (
     <SectionWrapper>
       <CTASection>
         <Overlay />
         <Content>
-          <h2>Find Your Dream Home Faster</h2>
-          <p>
-            Explore and uncover your ideal dream home more quickly than ever
-            before with our innovative tools and resources designed to
-            streamline your search.
-          </p>
+          <h2>{sectionData.heading}</h2>
+          <p>{sectionData.description}</p>
           <SlantedPrimaryButton href="/contact">
             <span className="transition"></span>
             <span className="label">Get in Touch →</span>
@@ -61,11 +63,11 @@ const Content = styled.div`
   position: relative;
   z-index: 1;
   text-align: center;
-  max-width: 780px;
+  max-width: 700px;
   color: #fff;
 
   h2 {
-    font-size: 52px;
+    font-size: 55px;
     font-weight: 500;
   }
 
@@ -109,7 +111,9 @@ const SlantedPrimaryButton = styled.button`
     width: 0;
     height: 2px;
     background-color: #fff;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
   }
 
   &:hover::after {

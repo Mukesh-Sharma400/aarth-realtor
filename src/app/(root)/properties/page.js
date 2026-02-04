@@ -1,22 +1,22 @@
 "use client";
 
-import styled from "styled-components";
 import Image from "next/image";
-import { PageHeader } from "@/app/components/PageHeader";
-import { SearchBar } from "../../components/SearchBar";
+import styled from "styled-components";
 import BaseLayout from "../../components/BaseLayout";
-import backgroundImage from "../../../../public/assets/hero-background.jpg";
-import family_house from "../../../../public/assets/family_house.jpg";
-import guest_house from "../../../../public/assets/guest_house.jpg";
+import { SearchBar } from "../../components/SearchBar";
 import villa from "../../../../public/assets/villa.jpg";
-import apartment from "../../../../public/assets/apartment.jpg";
+import { PageHeader } from "@/app/components/PageHeader";
 import cta_bg from "../../../../public/assets/cta_bg.jpg";
+import apartment from "../../../../public/assets/apartment.jpg";
+import guest_house from "../../../../public/assets/guest_house.jpg";
+import family_house from "../../../../public/assets/family_house.jpg";
+import backgroundImage from "../../../../public/assets/hero-background.jpg";
 
 export default function Properties() {
   const pageHeader = {
     heading: "Properties",
     description:
-      "Dive into the realm of excellence with our tailored services, meticulously crafted for every space and vision. Discover the unparalleled quality of our offerings.",
+      "Explore verified residential and commercial properties across prime locations. Find homes and investments that match your needs, budget, and future plans.",
   };
 
   const properties = [
@@ -116,7 +116,9 @@ const Card = styled.div`
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 
   &:hover {
     transform: translateY(-6px);
@@ -191,7 +193,9 @@ const SlantedArrowButton = styled.div`
     width: 0;
     height: 2px;
     background-color: #fff;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
   }
 
   &:hover::after {

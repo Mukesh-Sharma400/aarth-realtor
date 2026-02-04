@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
-import backgroundImage from "../../../public/assets/hero-background.jpg";
 import agent1 from "../../../public/assets/agent1.jpg";
 import agent2 from "../../../public/assets/agent2.jpg";
 import agent3 from "../../../public/assets/agent3.jpg";
@@ -215,7 +214,9 @@ const AgentCard = styled.div`
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 
   &:hover {
     transform: translateY(-6px);

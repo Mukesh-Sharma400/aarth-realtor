@@ -36,7 +36,7 @@ export const Hero = () => {
   const sectionData = {
     heading: "Find a home that suits your lifestyle.",
     description:
-      "We specialize in delivering thoughtfully designed residential and commercial spaces that blend quality, comfort, and long-term value. From concept to completion, we help you invest with confidence.",
+      "We offer well-planned residential and commercial properties built with quality materials, thoughtful design, and long-term value for families and businesses.",
   };
 
   const socialLinks = [
@@ -77,22 +77,19 @@ export const Hero = () => {
       </BackgroundImageWrapper>
       <ContentWrapper>
         <InnerContentWrapper data-aos="fade-right">
-          <Heading>
-            Find a home that suits your <span>lifestyle</span>.
-          </Heading>
-
+          <Heading>{sectionData.heading}</Heading>
           <Description>{sectionData.description}</Description>
           <ButtonsWrapper>
             {/* <PrimaryButton onClick={handleOpenDialer}>
               <span className="transition"></span>
               <span className="label">
-                <i class="bi bi-telephone-fill"></i> Call Us
+                <i className="bi bi-telephone-fill"></i> Call Us
               </span>
             </PrimaryButton> 
             <SecondaryButton onClick={handleCopyEmail}>
               <span className="transition"></span>
               <span className="label">
-                <i class="bi bi-copy"></i> Copy Email
+                <i className="bi bi-copy"></i> Copy Email
               </span>
             </SecondaryButton> */}
             <SlantedPrimaryButton onClick={handleOpenDialer}>
@@ -328,7 +325,9 @@ const SlantedPrimaryButton = styled.button`
     width: 0;
     height: 2px;
     background-color: #fff;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
   }
 
   &:hover::after {
@@ -475,16 +474,11 @@ const SocialLink = styled(Link)`
   text-decoration: none;
   font-size: 20px;
   border-radius: 50%;
-  color: white;
-  background: rgba(225, 225, 225, 0.3);
-  box-shadow: 0 4px 15px rgba(225, 225, 225, 0.3);
-  backdrop-filter: blur(10.1px);
-  -webkit-backdrop-filter: blur(10.1px);
-  border: 1px solid rgba(225, 225, 225, 1);
+  color: #cc1e15;
+  background: #fff;
   transition: all 0.5s ease-in-out;
 
   &:hover {
-    color: #cc1e15;
     border: 1px solid #cc1e15;
   }
 `;

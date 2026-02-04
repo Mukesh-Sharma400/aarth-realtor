@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
-import backgroundImage from "../../../public/assets/hero-background.jpg";
 import agent1 from "../../../public/assets/agent1.jpg";
 import agent2 from "../../../public/assets/agent2.jpg";
 import agent3 from "../../../public/assets/agent3.jpg";
 import agent4 from "../../../public/assets/agent4.jpg";
+import backgroundImage from "../../../public/assets/hero-background.jpg";
 
 export const Testimonials = () => {
   return (

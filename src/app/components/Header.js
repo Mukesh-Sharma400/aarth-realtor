@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { SideMenu } from "./SideMenu";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import { uiState } from "../redux/uiSlice";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import logo from "../../../public/assets/logo.png";
-import { uiState } from "../redux/uiSlice";
-import { useSelector } from "react-redux";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -145,7 +145,9 @@ const Route = styled(Link)`
     height: 2px;
     background-color: #cc1e15;
     width: 0;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
   }
 
   &:hover::before {
@@ -206,7 +208,9 @@ const Button = styled.button`
   .bar--1 {
     top: var(--pos-y-bar-one);
     transform: rotate(var(--rotate-bar-one));
-    transition: top 200ms 100ms, transform 100ms;
+    transition:
+      top 200ms 100ms,
+      transform 100ms;
   }
 
   .bar--2 {
@@ -217,7 +221,9 @@ const Button = styled.button`
   .bar--3 {
     bottom: var(--pos-y-bar-three);
     transform: rotate(var(--rotate-bar-three));
-    transition: bottom 200ms 100ms, transform 100ms;
+    transition:
+      bottom 200ms 100ms,
+      transform 100ms;
   }
 
   ${(props) =>
@@ -270,7 +276,9 @@ const SlantedPrimaryButton = styled.button`
     width: 0;
     height: 2px;
     background-color: #fff;
-    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
   }
 
   &:hover::after {
