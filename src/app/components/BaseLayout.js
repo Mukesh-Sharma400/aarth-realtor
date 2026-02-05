@@ -7,9 +7,9 @@ import styled from "styled-components";
 export default function BaseLayout({ children }) {
   return (
     <DisplayWrapper>
-      <Header />
+      {/* <Header /> */}
       {children}
-      <Footer />
+      {/* <Footer /> */}
     </DisplayWrapper>
   );
 }

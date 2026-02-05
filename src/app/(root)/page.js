@@ -6,13 +6,15 @@ import BaseLayout from "../components/BaseLayout";
 import { OurAgents } from "../sections/OurAgents";
 import { TopListing } from "../sections/TopListing";
 import { QuickAction } from "../sections/QuickAction";
+import { ComingSoon } from "../sections/ComingSoon";
 import { Testimonials } from "../sections/Testimonial";
 import { SectionDivider } from "../components/SectionDivider";
 
 export default function Home() {
   return (
     <BaseLayout>
-      <Hero />
+      <ComingSoon />
+      {/* <Hero />
       <Counting />
       <SectionDivider />
       <TopListing />
@@ -21,7 +23,7 @@ export default function Home() {
       <SectionDivider />
       <Testimonials />
       <SectionDivider />
-      <QuickAction />
+      <QuickAction /> */}
     </BaseLayout>
   );
 }
