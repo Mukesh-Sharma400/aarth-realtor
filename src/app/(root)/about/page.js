@@ -7,7 +7,10 @@ import Image from "next/image";
 import agent1 from "../../../../public/assets/agent1.jpg";
 import BaseLayout from "../../components/BaseLayout";
 import { PageHeader } from "@/app/components/PageHeader";
-import aboutus from "../../../../public/assets/hero-background.jpg";
+import aboutUs from "../../../../public/assets/real-aboutus.jpg";
+import missionImage from "../../../../public/assets/real-mission.jpeg";
+import { SectionDivider } from "@/app/components/SectionDivider";
+import { WhyUs } from "@/app/sections/WhyUs";
 
 export default function About() {
   const [screenWidth, setScreenWidth] = useState(
@@ -37,10 +40,10 @@ export default function About() {
   };
 
   const sectionData1 = {
-    smallHeading: "Our Story",
-    heading: "How We Started",
+    smallHeading: "How we Started",
+    heading: "Modern Living Thoughtfully Designed",
     description:
-      "Founded in 2020, Aarth Realtor began with a simple vision—to make property buying and investing clear, reliable, and stress-free. From local homebuyers to seasoned investors, we’ve grown by delivering genuine advice and dependable service across Navi Mumbai.",
+      "Founded in 2020, Aarth Realtor began with a simple vision—to make property buying and investing clear, reliable, and stress-free. From local home buyers to seasoned investors, we’ve grown by delivering genuine advice and dependable service across Navi Mumbai.",
   };
 
   const sectionData2 = {
@@ -54,37 +57,49 @@ export default function About() {
     <BaseLayout>
       <PageHeader pageHeader={pageHeader} />
       <ContentWrapper>
-        <BigSectionWrapper>
-          <KuwarImage
-            src={agent1}
-            alt="Kuwar Chand"
-            data-aos={screenWidth > 768 ? "fade-left" : "fade-up"}
-          />
-          <div>
-            <SectionHeading>{sectionData0.heading}</SectionHeading>
-            <SectionDescription>{sectionData0.description}</SectionDescription>
-          </div>
-        </BigSectionWrapper>
         <SectionWrapper className="section-first">
           <RightSide data-aos={screenWidth > 768 ? "fade-left" : "fade-right"}>
-            <SmallHeading>{sectionData1.smallHeading}</SmallHeading>
+            <SectionLabel><span>{sectionData1.smallHeading}</span><i /></SectionLabel>
             <SectionHeading>{sectionData1.heading}</SectionHeading>
             <SectionDescription>{sectionData1.description}</SectionDescription>
           </RightSide>
           <LeftSide>
-            <SectionImage src={aboutus} alt="About Us" />
+            <SectionImage src={aboutUs} alt="About Us" />
           </LeftSide>
         </SectionWrapper>
         <SectionWrapper className="section-second">
           <LeftSide>
-            <SectionImage src={aboutus} alt="About Us" />
+            <SectionImage src={missionImage} alt="About Us" />
           </LeftSide>
           <RightSide data-aos="fade-right">
-            <SmallHeading>{sectionData2.smallHeading}</SmallHeading>
+            <SectionLabel><span>{sectionData2.smallHeading}</span><i /></SectionLabel>
             <SectionHeading>{sectionData2.heading}</SectionHeading>
             <SectionDescription>{sectionData2.description}</SectionDescription>
           </RightSide>
         </SectionWrapper>
+        <SectionDivider/>
+        <WhyUs/>
+        <SectionDivider/>
+        <OwnerSectionWrapper>
+          <SectionLabel>
+            <span>OUR Founders</span>
+            <i />
+          </SectionLabel>
+          <SectionInfo>
+            <h2>Meet the People Behind</h2>
+          </SectionInfo>
+          <BigSectionWrapper>
+            <OwnerImage
+              src={agent1}
+              alt="Kuwar Chand"
+              data-aos={screenWidth > 768 ? "fade-left" : "fade-up"}
+            />
+            <div>
+              <SectionHeading>{sectionData0.heading}</SectionHeading>
+              <SectionDescription>{sectionData0.description}</SectionDescription>
+            </div>
+          </BigSectionWrapper>
+        </OwnerSectionWrapper>
       </ContentWrapper>
     </BaseLayout>
   );
@@ -96,10 +111,10 @@ const ContentWrapper = styled.div`
   transition: all 0.5s ease-in-out;
 `;
 
-const KuwarImage = styled(Image)`
+const OwnerImage = styled(Image)`
   width: 250px;
   height: 250px;
-  border-radius: 50%;
+  border-radius: 5%;
   transition: all 0.5s ease-in-out;
 
   @media (max-width: 1024px) {
@@ -129,6 +144,7 @@ const SectionImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius:20px;
   transition: all 0.5s ease-in-out;
 `;
 
@@ -161,14 +177,48 @@ const RightSide = styled.div`
 
 const SmallHeading = styled.p`
   font-size: 20px;
-  color: black;
+  color: #cc1e15;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.5s ease-in-out;
 `;
 
+const SectionLabel = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+
+  span {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #cc1e15;
+    text-transform: uppercase;
+  }
+
+  i {
+    width: 60px;
+    height: 1px;
+    background-color: #cc1e15;
+  }
+
+  i {
+    animation: expand 0.8s ease forwards;
+  }
+
+  @keyframes expand {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60px;
+    }
+  }
+`;
+
 const SectionHeading = styled.h1`
-  font-size: 50px;
+  font-size: 40px;
   transition: all 0.5s ease-in-out;
 
   @media (max-width: 1024px) {
@@ -194,22 +244,34 @@ const SectionDescription = styled.p`
 `;
 
 const BigSectionWrapper = styled.div`
-  padding: 0 5%;
+  padding: 20px 2%;
   display: flex;
   align-items: center;
   gap: 100px;
-  margin: 0 50px 50px;
+  margin-bottom: 50px;
   transition: all 0.5s ease-in-out;
+
+  background-image: repeating-linear-gradient(
+    to right,
+    #1d1d1d,
+    #1d1d1d 0.5px,
+    transparent 0.5px,
+    transparent
+  );
+  background-size: 200px 200px;
+  background-color: #0c0e17;
+  border-radius:20px;
 
   ${SectionHeading} {
     margin-bottom: 0.5rem !important;
+    color:#cc1e15;
   }
 
   @media (max-width: 1024px) {
     gap: 50px;
   }
   @media (max-width: 768px) {
-    padding: 0 0 30px 0;
+    padding: 10px 20px;
     gap: 20px;
     flex-direction: column;
 
@@ -218,10 +280,10 @@ const BigSectionWrapper = styled.div`
     }
   }
   @media (max-width: 550px) {
-    margin: 0 30px;
+    margin: 0 10px;
   }
   @media (max-width: 426px) {
-    margin: 0 20px;
+    margin: 0 0;
   }
 `;
 
@@ -230,28 +292,29 @@ const SectionWrapper = styled.div`
   padding: 0 5%;
   height: 500px;
   max-height: 500px;
+  border-radius:20px;
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
 
-  &.section-first {
-    background-image: repeating-linear-gradient(
-      to right,
-      #1d1d1d,
-      #1d1d1d 0.5px,
-      transparent 0.5px,
-      transparent
-    );
-    background-size: 200px 200px;
-    background-color: #0c0e17;
+  // &.section-first {
+  //   background-image: repeating-linear-gradient(
+  //     to right,
+  //     #1d1d1d,
+  //     #1d1d1d 0.5px,
+  //     transparent 0.5px,
+  //     transparent
+  //   );
+  //   background-size: 200px 200px;
+  //   background-color: #0c0e17;
 
-    ${SmallHeading} {
-      color: white;
-    }
-    ${SectionHeading} {
-      color: white;
-    }
-  }
+  //   ${SmallHeading} {
+  //     color: white;
+  //   }
+  //   ${SectionHeading} {
+  //     color: white;
+  //   }
+  // }
 
   @media (max-width: 768px) {
     padding: 0;
@@ -261,5 +324,32 @@ const SectionWrapper = styled.div`
     flex-direction: column;
     height: 100%;
     max-height: unset;
+  }
+`;
+
+const OwnerSectionWrapper = styled.div`
+  width: 100%;
+  padding: 50px 5%;
+`;
+
+const SectionInfo = styled.div`
+  display: grid;
+  align-items: center;
+  margin-bottom:30px;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 400;
+    color: #111827;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    h2 {
+      font-size: 26px;
+    }
   }
 `;

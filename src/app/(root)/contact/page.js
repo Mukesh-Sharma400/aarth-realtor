@@ -7,14 +7,15 @@ import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { Toast } from "@/app/components/Toast";
-import aboutus from "../../../../public/assets/hero-background.jpg";
+import HeadOffice from "../../../../public/assets/head-office.jpg";
+
 
 export default function Contact() {
   const form = useRef();
   const timeoutRef = useRef(null);
-  const phoneNumber = "+91";
-  const emailAddress = "@gmail.com";
-  const officeAddress = "";
+  const phoneNumber = "+91 - 0000000000";
+  const emailAddress = "aarth@gmail.com";
+  const officeAddress = "Aarth Realtor, First Floor Viraj CHS. Navi Mumbai, Maharashtra";
   const [toast, setToast] = useState({ visible: false, message: "" });
 
   const showToastMethod = (message) => {
@@ -120,7 +121,7 @@ export default function Contact() {
             </FieldContainer>
             <FieldContainer>
               <Label>Your Phone Number</Label>
-              <TextBox placeholder="5555555555" name="phone_number" required />
+              <TextBox placeholder="+91-0000000000" name="phone_number" required />
             </FieldContainer>
           </EmailPhoneWrapper>
           <FieldContainer>
@@ -131,10 +132,10 @@ export default function Contact() {
               required
             />
           </FieldContainer>
-          <Button type="submit">
+          <SlantedPrimaryButton type="submit">
             <span className="transition"></span>
             <span className="label">Send Message</span>
-          </Button>
+          </SlantedPrimaryButton>
         </ContactForm>
       </MainSection>
       <SmallHeader data-aos="fade-up">
@@ -143,7 +144,7 @@ export default function Contact() {
       </SmallHeader>
       <VisitUsWrapper>
         <LeftSide>
-          <AboutUsImage src={aboutus} alt="About Us" />
+          <AboutUsImage src={HeadOffice} alt="About Us" />
         </LeftSide>
         <RightSide data-aos="fade-right">
           <LightHeading>{officeSectionData.heading}</LightHeading>
@@ -153,7 +154,7 @@ export default function Contact() {
               <IconWrapper>
                 <i className="bi bi-telephone-fill"></i>
               </IconWrapper>
-              <IconText>(+91)</IconText>
+              <IconText>(+91 - 0000000000)</IconText>
             </PhoneEmailLocationContainer>
             <PhoneEmailLocationContainer onClick={handleOpenMailer}>
               <IconWrapper>
@@ -413,8 +414,9 @@ const Button = styled.button`
 
 const VisitUsWrapper = styled.div`
   width: 100%;
-  height: 100vh;
-  max-height: 700px;
+  padding: 50px 2%;
+  height: 600px;
+  max-height: 600px;
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
@@ -440,6 +442,7 @@ const AboutUsImage = styled(Image)`
   height: 100%;
   object-fit: cover;
   transition: all 0.5s ease-in-out;
+  border-radius:20px;
 `;
 
 const RightSide = styled.div`
@@ -474,7 +477,7 @@ const PhoneEmailLocationWrapper = styled.div`
 
 const IconWrapper = styled.div`
   font-size: 30px;
-  color: #ab81e8;
+  color: #cc1e15;
   transition: all 0.5s ease-in-out;
 
   @media (max-width: 1024px) {
@@ -513,11 +516,62 @@ const PhoneEmailLocationContainer = styled.div`
 
   &:hover {
     ${IconWrapper} {
-      color: #23c3c4;
+      color: #cc1e15;
     }
 
     ${IconText} {
-      color: #23c3c4;
+      color: #cc1e15;
     }
+  }
+`;
+
+const SlantedPrimaryButton = styled.button`
+  width: 200px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #cc1e15, #c01209ff);
+  border: none;
+  cursor: pointer;
+  display: block;
+
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+
+  position: relative;
+  transition: transform 0.3s ease;
+  overflow: visible;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 1%;
+    bottom: 1px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition:
+      width 0.3s ease-in-out,
+      background-color 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    width: 70%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 170px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 426px) {
+    width: 130px;
+    height: 34px;
+    font-size: 14px;
   }
 `;
