@@ -7,7 +7,7 @@ import logo from "../../../public/assets/logo.png";
 
 export const Footer = () => {
   const pathName = usePathname();
-  const phoneNumber = "+91";
+  const phoneNumber = "+918976630666";
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
