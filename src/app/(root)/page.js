@@ -13,8 +13,8 @@ import { SectionDivider } from "../components/SectionDivider";
 export default function Home() {
   return (
     <BaseLayout>
-      <ComingSoon />
-      {/* <Hero />
+      {/* <ComingSoon /> */}
+      <Hero />
       <Counting />
       <SectionDivider />
       <TopListing />
@@ -23,7 +23,7 @@ export default function Home() {
       <SectionDivider />
       <Testimonials />
       <SectionDivider />
-      <QuickAction /> */}
+      <QuickAction />
     </BaseLayout>
   );
 }

@@ -9,13 +9,13 @@ import { useRef, useState } from "react";
 import { Toast } from "@/app/components/Toast";
 import HeadOffice from "../../../../public/assets/head-office.jpg";
 
-
 export default function Contact() {
   const form = useRef();
   const timeoutRef = useRef(null);
-  const phoneNumber = "+91 - 0000000000";
-  const emailAddress = "aarth@gmail.com";
-  const officeAddress = "Aarth Realtor, First Floor Viraj CHS. Navi Mumbai, Maharashtra";
+  const phoneNumber = "(+91) 8976630666";
+  const emailAddress = "aarthrealtor@gmail.com";
+  const officeAddress =
+    "Shree Siddhivinayak CHS Pvt Ltd, Shop No. 02, Plot No. 31, Sector 24, Ulwe, Navi Mumbai - 410206.";
   const [toast, setToast] = useState({ visible: false, message: "" });
 
   const showToastMethod = (message) => {
@@ -121,7 +121,11 @@ export default function Contact() {
             </FieldContainer>
             <FieldContainer>
               <Label>Your Phone Number</Label>
-              <TextBox placeholder="+91-0000000000" name="phone_number" required />
+              <TextBox
+                placeholder="+91-0000000000"
+                name="phone_number"
+                required
+              />
             </FieldContainer>
           </EmailPhoneWrapper>
           <FieldContainer>
@@ -154,7 +158,7 @@ export default function Contact() {
               <IconWrapper>
                 <i className="bi bi-telephone-fill"></i>
               </IconWrapper>
-              <IconText>(+91 - 0000000000)</IconText>
+              <IconText>{phoneNumber}</IconText>
             </PhoneEmailLocationContainer>
             <PhoneEmailLocationContainer onClick={handleOpenMailer}>
               <IconWrapper>
@@ -442,7 +446,7 @@ const AboutUsImage = styled(Image)`
   height: 100%;
   object-fit: cover;
   transition: all 0.5s ease-in-out;
-  border-radius:20px;
+  border-radius: 20px;
 `;
 
 const RightSide = styled.div`

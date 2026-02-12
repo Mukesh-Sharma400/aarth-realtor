@@ -34,16 +34,16 @@ export default function About() {
   };
 
   const sectionData0 = {
-    heading: "Kuwar Chand Sharma",
+    heading: "Tannu  Sharma",
     description:
-      "Meet the driving force behind Aarth Realtor, Kuwar Chand Sharma. With deep market knowledge and a strong commitment to transparency, he has built the company on trust, integrity, and long-term value. His practical approach and attention to detail ensure every client receives honest guidance and reliable real estate solutions.",
+      "Meet the driving force behind Aarth Realtor, Tannu  Sharma. With deep market knowledge and a strong commitment to transparency, he has built the company on trust, integrity, and long-term value. His practical approach and attention to detail ensure every client receives honest guidance and reliable real estate solutions.",
   };
 
   const sectionData1 = {
     smallHeading: "How we Started",
     heading: "Modern Living Thoughtfully Designed",
     description:
-      "Founded in 2020, Aarth Realtor began with a simple vision—to make property buying and investing clear, reliable, and stress-free. From local home buyers to seasoned investors, we’ve grown by delivering genuine advice and dependable service across Navi Mumbai.",
+      "Founded in 2025, Aarth Realtor began with a simple vision—to make property buying and investing clear, reliable, and stress-free. From local home buyers to seasoned investors, we’ve grown by delivering genuine advice and dependable service across Navi Mumbai.",
   };
 
   const sectionData2 = {
@@ -59,7 +59,10 @@ export default function About() {
       <ContentWrapper>
         <SectionWrapper className="section-first">
           <RightSide data-aos={screenWidth > 768 ? "fade-left" : "fade-right"}>
-            <SectionLabel><span>{sectionData1.smallHeading}</span><i /></SectionLabel>
+            <SectionLabel>
+              <span>{sectionData1.smallHeading}</span>
+              <i />
+            </SectionLabel>
             <SectionHeading>{sectionData1.heading}</SectionHeading>
             <SectionDescription>{sectionData1.description}</SectionDescription>
           </RightSide>
@@ -72,14 +75,17 @@ export default function About() {
             <SectionImage src={missionImage} alt="About Us" />
           </LeftSide>
           <RightSide data-aos="fade-right">
-            <SectionLabel><span>{sectionData2.smallHeading}</span><i /></SectionLabel>
+            <SectionLabel>
+              <span>{sectionData2.smallHeading}</span>
+              <i />
+            </SectionLabel>
             <SectionHeading>{sectionData2.heading}</SectionHeading>
             <SectionDescription>{sectionData2.description}</SectionDescription>
           </RightSide>
         </SectionWrapper>
-        <SectionDivider/>
-        <WhyUs/>
-        <SectionDivider/>
+        <SectionDivider />
+        <WhyUs />
+        <SectionDivider />
         <OwnerSectionWrapper>
           <SectionLabel>
             <span>OUR Founders</span>
@@ -91,12 +97,14 @@ export default function About() {
           <BigSectionWrapper>
             <OwnerImage
               src={agent1}
-              alt="Kuwar Chand"
+              alt="Tannu "
               data-aos={screenWidth > 768 ? "fade-left" : "fade-up"}
             />
             <div>
               <SectionHeading>{sectionData0.heading}</SectionHeading>
-              <SectionDescription>{sectionData0.description}</SectionDescription>
+              <SectionDescription>
+                {sectionData0.description}
+              </SectionDescription>
             </div>
           </BigSectionWrapper>
         </OwnerSectionWrapper>
@@ -144,7 +152,7 @@ const SectionImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius:20px;
+  border-radius: 20px;
   transition: all 0.5s ease-in-out;
 `;
 
@@ -260,11 +268,11 @@ const BigSectionWrapper = styled.div`
   );
   background-size: 200px 200px;
   background-color: #0c0e17;
-  border-radius:20px;
+  border-radius: 20px;
 
   ${SectionHeading} {
     margin-bottom: 0.5rem !important;
-    color:#cc1e15;
+    color: #cc1e15;
   }
 
   @media (max-width: 1024px) {
@@ -292,7 +300,7 @@ const SectionWrapper = styled.div`
   padding: 0 5%;
   height: 500px;
   max-height: 500px;
-  border-radius:20px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
@@ -335,7 +343,7 @@ const OwnerSectionWrapper = styled.div`
 const SectionInfo = styled.div`
   display: grid;
   align-items: center;
-  margin-bottom:30px;
+  margin-bottom: 30px;
 
   h2 {
     font-size: 36px;
